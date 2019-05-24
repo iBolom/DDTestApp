@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		EBE0C0DE22983D8E00425252 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0DD22983D8E00425252 /* MapViewController.swift */; };
 		EBE0C0E2229842E400425252 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E1229842E400425252 /* UserTableViewCell.swift */; };
 		EBE0C0E4229843E700425252 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E3229843E700425252 /* User.swift */; };
+		EBE0C0E7229848BA00425252 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E6229848BA00425252 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		EBE0C0DD22983D8E00425252 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		EBE0C0E1229842E400425252 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		EBE0C0E3229843E700425252 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EBE0C0E6229848BA00425252 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,6 @@
 				49018599D65C0A4DBE6AD6C1 /* Pods-DarwinDigitalTest.debug.xcconfig */,
 				2E72F68116C56749966FDE03 /* Pods-DarwinDigitalTest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -85,6 +86,7 @@
 		EBE0C0C622983C5500425252 /* DarwinDigitalTest */ = {
 			isa = PBXGroup;
 			children = (
+				EBE0C0E5229848B000425252 /* Managers */,
 				EBE0C0D922983C7D00425252 /* Supporting Files */,
 				EBE0C0E0229842A900425252 /* Models */,
 				EBE0C0DF2298429E00425252 /* Views */,
@@ -128,6 +130,14 @@
 				EBE0C0E3229843E700425252 /* User.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		EBE0C0E5229848B000425252 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0C0E6229848BA00425252 /* APIManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE0C0E7229848BA00425252 /* APIManager.swift in Sources */,
 				EBE0C0E2229842E400425252 /* UserTableViewCell.swift in Sources */,
 				EBE0C0DC22983D5B00425252 /* ListViewController.swift in Sources */,
 				EBE0C0DE22983D8E00425252 /* MapViewController.swift in Sources */,
