@@ -13,6 +13,7 @@
 		EBE0C0D222983C5600425252 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE0C0D022983C5600425252 /* LaunchScreen.storyboard */; };
 		EBE0C0DC22983D5B00425252 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0DB22983D5B00425252 /* ListViewController.swift */; };
 		EBE0C0DE22983D8E00425252 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0DD22983D8E00425252 /* MapViewController.swift */; };
+		EBE0C0E2229842E400425252 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E1229842E400425252 /* UserTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EBE0C0D322983C5600425252 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBE0C0DB22983D5B00425252 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		EBE0C0DD22983D8E00425252 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		EBE0C0E1229842E400425252 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				EBE0C0D922983C7D00425252 /* Supporting Files */,
+				EBE0C0E0229842A900425252 /* Models */,
+				EBE0C0DF2298429E00425252 /* Views */,
 				EBE0C0DA22983D4200425252 /* ViewControllers */,
 				EBE0C0C722983C5500425252 /* AppDelegate.swift */,
 				EBE0C0CB22983C5500425252 /* Main.storyboard */,
@@ -81,6 +85,21 @@
 				EBE0C0DD22983D8E00425252 /* MapViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EBE0C0DF2298429E00425252 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EBE0C0E1229842E400425252 /* UserTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		EBE0C0E0229842A900425252 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE0C0E2229842E400425252 /* UserTableViewCell.swift in Sources */,
 				EBE0C0DC22983D5B00425252 /* ListViewController.swift in Sources */,
 				EBE0C0DE22983D8E00425252 /* MapViewController.swift in Sources */,
 				EBE0C0C822983C5500425252 /* AppDelegate.swift in Sources */,

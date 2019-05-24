@@ -11,4 +11,14 @@ import UIKit
 
 final class ListViewController: UIViewController {
     
+    // MARK: - Outlets
+    @IBOutlet private weak var tableView: UITableView!
+    
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
+    
 }
