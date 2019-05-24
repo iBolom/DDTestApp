@@ -25,6 +25,9 @@ final class ListViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        // Set tab bar controller delegate in order to pass users to MapViewController
+        self.tabBarController?.delegate = self
+        
         // Fetch list of users
         APIManager.shared.getUsers { [weak self] (users, error) in
             guard let `self` = self else { return }
@@ -59,5 +62,14 @@ extension ListViewController: UITableViewDataSource {
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
+    }
+}
+
+// MARK: - UITabBarDelegate
+extension ListViewController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if let mapViewController = viewController as? MapViewController {
+            mapViewController.users = users
+        }
     }
 }

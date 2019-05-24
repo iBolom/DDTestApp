@@ -19,6 +19,7 @@ class User: Codable {
         let suite: String
         let city: String
         let zipcode: String
+        let geo: Geo
         
     }
     

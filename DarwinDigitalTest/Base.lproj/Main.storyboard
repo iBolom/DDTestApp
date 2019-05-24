@@ -17,10 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="o0L-Xk-GUb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XnY-Ds-LXn">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XnY-Ds-LXn" firstAttribute="top" secondItem="ft5-YP-1Po" secondAttribute="top" id="9zE-Pk-WS4"/>
+                            <constraint firstItem="ft5-YP-1Po" firstAttribute="bottom" secondItem="XnY-Ds-LXn" secondAttribute="bottom" id="Bwq-NC-A5P"/>
+                            <constraint firstItem="XnY-Ds-LXn" firstAttribute="leading" secondItem="ft5-YP-1Po" secondAttribute="leading" id="Lam-nc-wYw"/>
+                            <constraint firstItem="ft5-YP-1Po" firstAttribute="trailing" secondItem="XnY-Ds-LXn" secondAttribute="trailing" id="uGb-0U-AN6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ft5-YP-1Po"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="map_marker" id="87x-U6-wef"/>
+                    <connections>
+                        <outlet property="mapView" destination="XnY-Ds-LXn" id="3hw-Lz-RIo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2h-3P-Eyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

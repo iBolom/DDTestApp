@@ -17,6 +17,7 @@
 		EBE0C0E2229842E400425252 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E1229842E400425252 /* UserTableViewCell.swift */; };
 		EBE0C0E4229843E700425252 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E3229843E700425252 /* User.swift */; };
 		EBE0C0E7229848BA00425252 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E6229848BA00425252 /* APIManager.swift */; };
+		EBE0C0E92298512C00425252 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E82298512C00425252 /* UserAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EBE0C0E1229842E400425252 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		EBE0C0E3229843E700425252 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EBE0C0E6229848BA00425252 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		EBE0C0E82298512C00425252 /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				EBE0C0E3229843E700425252 /* User.swift */,
+				EBE0C0E82298512C00425252 /* UserAnnotation.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				EBE0C0DE22983D8E00425252 /* MapViewController.swift in Sources */,
 				EBE0C0E4229843E700425252 /* User.swift in Sources */,
 				EBE0C0C822983C5500425252 /* AppDelegate.swift in Sources */,
+				EBE0C0E92298512C00425252 /* UserAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
