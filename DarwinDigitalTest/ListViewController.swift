@@ -17,6 +17,7 @@ final class ListViewController: UIViewController {
     // MARK: - Properties
     var users: [User] = [] {
         didSet {
+            users.sort { $0.name < $1.name }
             tableView.reloadData()
         }
     }
