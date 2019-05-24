@@ -49,8 +49,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zqn-ct-6v0">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VJy-e9-2lF">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserTableViewCell" rowHeight="90" id="waA-JM-GKv" customClass="UserTableViewCell" customModule="DarwinDigitalTest" customModuleProvider="target">
@@ -103,14 +107,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xmm-Jh-kgf" firstAttribute="trailing" secondItem="VJy-e9-2lF" secondAttribute="trailing" id="7Gl-2B-3g7"/>
+                            <constraint firstItem="zqn-ct-6v0" firstAttribute="leading" secondItem="xmm-Jh-kgf" secondAttribute="leading" id="9Xf-el-XbR"/>
+                            <constraint firstItem="zqn-ct-6v0" firstAttribute="top" secondItem="xmm-Jh-kgf" secondAttribute="top" id="A7J-in-J52"/>
                             <constraint firstItem="xmm-Jh-kgf" firstAttribute="bottom" secondItem="VJy-e9-2lF" secondAttribute="bottom" id="Feg-Mr-DpY"/>
-                            <constraint firstItem="VJy-e9-2lF" firstAttribute="top" secondItem="xmm-Jh-kgf" secondAttribute="top" id="ZDC-if-enS"/>
+                            <constraint firstItem="zqn-ct-6v0" firstAttribute="trailing" secondItem="xmm-Jh-kgf" secondAttribute="trailing" id="Zbp-P4-GwG"/>
+                            <constraint firstItem="VJy-e9-2lF" firstAttribute="top" secondItem="zqn-ct-6v0" secondAttribute="bottom" id="dWk-0c-wrs"/>
                             <constraint firstItem="VJy-e9-2lF" firstAttribute="leading" secondItem="xmm-Jh-kgf" secondAttribute="leading" id="mt2-yD-TSI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xmm-Jh-kgf"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="List" image="list" id="lw7-ob-Q5h"/>
                     <connections>
+                        <outlet property="searchBar" destination="zqn-ct-6v0" id="vPx-Jw-zLR"/>
                         <outlet property="tableView" destination="VJy-e9-2lF" id="m7r-eh-obc"/>
                         <segue destination="blk-K3-mfs" kind="show" identifier="showDetail" id="r3b-Xd-Td5"/>
                     </connections>

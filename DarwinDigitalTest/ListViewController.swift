@@ -13,11 +13,16 @@ final class ListViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var searchBar: UISearchBar?
     
     // MARK: - Properties
+    private var allUsers: [User] = [] // this property will be used for filtering during search
+    private var isSearchActive: Bool = false // indicate if searching users is active
+    
     var users: [User] = [] {
         didSet {
             users.sort { $0.name < $1.name }
+            allUsers = users
             tableView.reloadData()
         }
     }
@@ -33,12 +38,16 @@ final class ListViewController: UIViewController {
         
         // Set tab bar controller delegate in order to pass users to MapViewController
         self.tabBarController?.delegate = self
+        
+        // Setup search bar
+        searchBar?.delegate = self
+        searchBar?.placeholder = "Type user name to search"
     }
     
     // MARK: - Prepare for Seque
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailVC = segue.destination as? UserDetailViewController {
-            detailVC.user = users[selectedRow]
+            detailVC.user = isSearchActive ? allUsers[selectedRow] : users[selectedRow]
         }
     }
 }
@@ -50,12 +59,12 @@ extension ListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return isSearchActive ? allUsers.count : users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let userCell = tableView.dequeueReusableCell(withIdentifier: String(describing: UserTableViewCell.self), for: indexPath) as! UserTableViewCell
-        userCell.configureCellWith(user: self.users[indexPath.row])
+        userCell.configureCellWith(user: isSearchActive ? allUsers[indexPath.row] : users[indexPath.row])
         
         return userCell
     }
@@ -81,5 +90,18 @@ extension ListViewController: UITabBarControllerDelegate {
         if let mapViewController = viewController as? MapViewController {
             mapViewController.users = users
         }
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension ListViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        isSearchActive = !searchText.isEmpty
+        allUsers = users
+        if isSearchActive {
+            allUsers = allUsers.filter { $0.name.contains(searchText) }
+        }
+        
+        tableView.reloadData()
     }
 }
