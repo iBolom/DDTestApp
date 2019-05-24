@@ -12,7 +12,7 @@ import UIKit
 final class ListViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView?
     @IBOutlet private weak var searchBar: UISearchBar?
     
     // MARK: - Properties
@@ -23,7 +23,7 @@ final class ListViewController: UIViewController {
         didSet {
             users.sort { $0.name < $1.name }
             allUsers = users
-            tableView.reloadData()
+            tableView?.reloadData()
         }
     }
     var selectedRow: Int = 0
@@ -33,8 +33,8 @@ final class ListViewController: UIViewController {
         super.viewDidLoad()
         
         // Set table view delegate and data source
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView?.dataSource = self
+        tableView?.delegate = self
         
         // Set tab bar controller delegate in order to pass users to MapViewController
         self.tabBarController?.delegate = self
@@ -102,6 +102,6 @@ extension ListViewController: UISearchBarDelegate {
             allUsers = allUsers.filter { $0.name.contains(searchText) }
         }
         
-        tableView.reloadData()
+        tableView?.reloadData()
     }
 }
