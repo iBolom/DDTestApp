@@ -18,6 +18,7 @@
 		EBE0C0E4229843E700425252 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E3229843E700425252 /* User.swift */; };
 		EBE0C0E7229848BA00425252 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E6229848BA00425252 /* APIManager.swift */; };
 		EBE0C0E92298512C00425252 /* UserAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0E82298512C00425252 /* UserAnnotation.swift */; };
+		EBE0C0EB229879F000425252 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0EA229879F000425252 /* UserDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		EBE0C0E3229843E700425252 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		EBE0C0E6229848BA00425252 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		EBE0C0E82298512C00425252 /* UserAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnnotation.swift; sourceTree = "<group>"; };
+		EBE0C0EA229879F000425252 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			children = (
 				EBE0C0DB22983D5B00425252 /* ListViewController.swift */,
 				EBE0C0DD22983D8E00425252 /* MapViewController.swift */,
+				EBE0C0EA229879F000425252 /* UserDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			files = (
 				EBE0C0E7229848BA00425252 /* APIManager.swift in Sources */,
 				EBE0C0E2229842E400425252 /* UserTableViewCell.swift in Sources */,
+				EBE0C0EB229879F000425252 /* UserDetailViewController.swift in Sources */,
 				EBE0C0DC22983D5B00425252 /* ListViewController.swift in Sources */,
 				EBE0C0DE22983D8E00425252 /* MapViewController.swift in Sources */,
 				EBE0C0E4229843E700425252 /* User.swift in Sources */,

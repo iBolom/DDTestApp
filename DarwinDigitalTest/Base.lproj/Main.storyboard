@@ -34,6 +34,7 @@
                     <tabBarItem key="tabBarItem" title="Map" image="map_marker" id="87x-U6-wef"/>
                     <connections>
                         <outlet property="mapView" destination="XnY-Ds-LXn" id="3hw-Lz-RIo"/>
+                        <segue destination="blk-K3-mfs" kind="show" identifier="showDetail" id="9RC-me-Fzl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h2h-3P-Eyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -111,6 +112,7 @@
                     <tabBarItem key="tabBarItem" title="List" image="list" id="lw7-ob-Q5h"/>
                     <connections>
                         <outlet property="tableView" destination="VJy-e9-2lF" id="m7r-eh-obc"/>
+                        <segue destination="blk-K3-mfs" kind="show" identifier="showDetail" id="r3b-Xd-Td5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g5Q-F2-qj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -135,9 +137,95 @@
             </objects>
             <point key="canvasLocation" x="-1049" y="-175"/>
         </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="38Y-RC-Joy">
+            <objects>
+                <viewController storyboardIdentifier="UserDetailViewController" id="blk-K3-mfs" customClass="UserDetailViewController" customModule="DarwinDigitalTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YCy-vn-dFT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-Tb-sPH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JvL-Tb-sPH" secondAttribute="height" multiplier="375:225" id="O9a-Ng-aFn"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YNn-6y-Csp">
+                                <rect key="frame" x="15" y="270" width="77.5" height="162.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAq-7D-DS1">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMi-Zt-KQS">
+                                        <rect key="frame" x="0.0" y="35.5" width="77.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbM-cR-SAd">
+                                        <rect key="frame" x="0.0" y="71" width="77.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrP-Lx-t1t">
+                                        <rect key="frame" x="0.0" y="106.5" width="77.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkY-b4-K5E">
+                                        <rect key="frame" x="0.0" y="142" width="77.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSp-uc-3Y5">
+                                <rect key="frame" x="170" y="593" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="blk-K3-mfs" eventType="touchUpInside" id="B5b-L8-6nq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JvL-Tb-sPH" firstAttribute="leading" secondItem="l6Z-xE-ujU" secondAttribute="leading" id="1ba-KH-flx"/>
+                            <constraint firstItem="JvL-Tb-sPH" firstAttribute="top" secondItem="l6Z-xE-ujU" secondAttribute="top" id="7qq-Ld-m7U"/>
+                            <constraint firstItem="l6Z-xE-ujU" firstAttribute="trailing" secondItem="JvL-Tb-sPH" secondAttribute="trailing" id="Lvl-QL-xuS"/>
+                            <constraint firstItem="YNn-6y-Csp" firstAttribute="leading" secondItem="l6Z-xE-ujU" secondAttribute="leading" constant="15" id="ZkR-KA-7hA"/>
+                            <constraint firstItem="YNn-6y-Csp" firstAttribute="top" secondItem="JvL-Tb-sPH" secondAttribute="bottom" constant="25" id="n4L-QD-s1o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="l6Z-xE-ujU"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="kbM-cR-SAd" id="hbO-Jl-paf"/>
+                        <outlet property="avatarImageView" destination="JvL-Tb-sPH" id="LAV-PN-vUH"/>
+                        <outlet property="companyLabel" destination="TMi-Zt-KQS" id="NUV-mL-lkT"/>
+                        <outlet property="nameLabel" destination="sAq-7D-DS1" id="OI5-pV-aHS"/>
+                        <outlet property="phoneLabel" destination="IrP-Lx-t1t" id="ip7-8M-2Vd"/>
+                        <outlet property="websiteLabel" destination="NkY-b4-K5E" id="klf-wb-hoT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6nP-Em-2wU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="-104"/>
+        </scene>
     </scenes>
     <resources>
         <image name="list" width="30" height="30"/>
         <image name="map_marker" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="r3b-Xd-Td5"/>
+    </inferredMetricsTieBreakers>
 </document>

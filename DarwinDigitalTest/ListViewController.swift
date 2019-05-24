@@ -15,7 +15,12 @@ final class ListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     // MARK: - Properties
-    private var users: [User] = []
+    var users: [User] = [] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    var selectedRow: Int = 0
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -27,15 +32,12 @@ final class ListViewController: UIViewController {
         
         // Set tab bar controller delegate in order to pass users to MapViewController
         self.tabBarController?.delegate = self
-        
-        // Fetch list of users
-        APIManager.shared.getUsers { [weak self] (users, error) in
-            guard let `self` = self else { return }
-            
-            if let users = users {
-                self.users = users
-                self.tableView.reloadData()
-            }
+    }
+    
+    // MARK: - Prepare for Seque
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailVC = segue.destination as? UserDetailViewController {
+            detailVC.user = users[selectedRow]
         }
     }
 }
@@ -62,6 +64,13 @@ extension ListViewController: UITableViewDataSource {
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath.row
+        performSegue(withIdentifier: "showDetail", sender: nil)
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
