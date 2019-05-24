@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		557DA908F9BA2A484DC6FCD0 /* Pods_DarwinDigitalTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D656676CC18C014EEE5FCABC /* Pods_DarwinDigitalTest.framework */; };
 		EBE0C0C822983C5500425252 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE0C0C722983C5500425252 /* AppDelegate.swift */; };
 		EBE0C0CD22983C5500425252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE0C0CB22983C5500425252 /* Main.storyboard */; };
 		EBE0C0CF22983C5600425252 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBE0C0CE22983C5600425252 /* Assets.xcassets */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E72F68116C56749966FDE03 /* Pods-DarwinDigitalTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarwinDigitalTest.release.xcconfig"; path = "Target Support Files/Pods-DarwinDigitalTest/Pods-DarwinDigitalTest.release.xcconfig"; sourceTree = "<group>"; };
+		49018599D65C0A4DBE6AD6C1 /* Pods-DarwinDigitalTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DarwinDigitalTest.debug.xcconfig"; path = "Target Support Files/Pods-DarwinDigitalTest/Pods-DarwinDigitalTest.debug.xcconfig"; sourceTree = "<group>"; };
+		D656676CC18C014EEE5FCABC /* Pods_DarwinDigitalTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DarwinDigitalTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE0C0C422983C5500425252 /* DarwinDigitalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarwinDigitalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE0C0C722983C5500425252 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBE0C0CC22983C5500425252 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,17 +39,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				557DA908F9BA2A484DC6FCD0 /* Pods_DarwinDigitalTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		298ABCBE3C6E440708F3B405 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49018599D65C0A4DBE6AD6C1 /* Pods-DarwinDigitalTest.debug.xcconfig */,
+				2E72F68116C56749966FDE03 /* Pods-DarwinDigitalTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E8FB3760B05A7F189314F8B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D656676CC18C014EEE5FCABC /* Pods_DarwinDigitalTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EBE0C0BB22983C5400425252 = {
 			isa = PBXGroup;
 			children = (
 				EBE0C0C622983C5500425252 /* DarwinDigitalTest */,
 				EBE0C0C522983C5500425252 /* Products */,
+				298ABCBE3C6E440708F3B405 /* Pods */,
+				E8FB3760B05A7F189314F8B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBE0C0D622983C5600425252 /* Build configuration list for PBXNativeTarget "DarwinDigitalTest" */;
 			buildPhases = (
+				3F3726C1FCBA1152ACA0B523 /* [CP] Check Pods Manifest.lock */,
 				EBE0C0C022983C5500425252 /* Sources */,
 				EBE0C0C122983C5500425252 /* Frameworks */,
 				EBE0C0C222983C5500425252 /* Resources */,
+				E79855C571D5E242E00F126D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -170,6 +197,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F3726C1FCBA1152ACA0B523 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DarwinDigitalTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E79855C571D5E242E00F126D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DarwinDigitalTest/Pods-DarwinDigitalTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DarwinDigitalTest/Pods-DarwinDigitalTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DarwinDigitalTest/Pods-DarwinDigitalTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EBE0C0C022983C5500425252 /* Sources */ = {
@@ -324,6 +393,7 @@
 		};
 		EBE0C0D722983C5600425252 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49018599D65C0A4DBE6AD6C1 /* Pods-DarwinDigitalTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -343,6 +413,7 @@
 		};
 		EBE0C0D822983C5600425252 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E72F68116C56749966FDE03 /* Pods-DarwinDigitalTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
