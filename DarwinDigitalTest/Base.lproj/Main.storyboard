@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WiK-xJ-ElU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map-->
+        <scene sceneID="OBs-bO-uS8">
+            <objects>
+                <viewController id="16f-N4-1TL" customClass="MapViewController" customModule="DarwinDigitalTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o0L-Xk-GUb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ft5-YP-1Po"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Map" image="map_marker" id="87x-U6-wef"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h2h-3P-Eyf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="149"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="Y3d-8L-jtI">
+            <objects>
+                <viewController id="Ppn-KG-avD" customClass="ListViewController" customModule="DarwinDigitalTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eqk-05-Wnn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xmm-Jh-kgf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List" image="list" id="lw7-ob-Q5h"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g5Q-F2-qj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="-499"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="1SH-KB-GhQ">
+            <objects>
+                <tabBarController id="WiK-xJ-ElU" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uGk-11-CVn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ppn-KG-avD" kind="relationship" relationship="viewControllers" id="TiG-Ji-I2u"/>
+                        <segue destination="16f-N4-1TL" kind="relationship" relationship="viewControllers" id="TmK-Yi-S97"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LMY-sq-phh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1049" y="-175"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="list" width="30" height="30"/>
+        <image name="map_marker" width="30" height="30"/>
+    </resources>
+</document>
